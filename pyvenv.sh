@@ -1,4 +1,4 @@
-# Credit: https://gitlab.msu.edu/av/av_24/-/blob/main/Setup/Control_Workstations.md?ref_type=heads
+# Credit: https://gitlab.msu.edu/av/av_24/-/blob/main/Setup/Control_Workstations.md
 # Initialize my Python virtual environment helper functions
 VENV_FOLDER=$HOME/venvs          # Change this as appropriate
 
