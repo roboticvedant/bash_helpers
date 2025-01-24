@@ -29,3 +29,25 @@ addpypath() {
     eval $cmd
   fi
 }
+
+mkvenv() {
+  if [ $# -eq 0 ]
+  then
+    echo "Error: Please provide a name for the virtual environment."
+    echo "Usage: mkvenv <venv_name> [--system-site-packages]"
+  else
+    VENV_NAME=$1
+    VENV_PATH=$VENV_FOLDER/$VENV_NAME
+    if [ -d "$VENV_PATH" ]; then
+      echo "Error: Virtual environment '$VENV_NAME' already exists in $VENV_FOLDER."
+    else
+      echo "Creating virtual environment: $VENV_NAME in $VENV_FOLDER..."
+      if [ "$2" == "--system-site-packages" ]; then
+        python -m venv $VENV_PATH --system-site-packages
+      else
+        python -m venv $VENV_PATH
+      fi
+      echo "Virtual environment '$VENV_NAME' created successfully."
+    fi
+  fi
+}
