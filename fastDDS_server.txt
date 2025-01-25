@@ -1,0 +1,6 @@
+## Steps to Start Server
+source /opt/ros/humble/setup.bash
+fastdds discovery --server-id 0 --ip-address 35.9.128.247 --port 11811
+
+ export FASTRTPS_DEFAULT_PROFILES_FILE=~/super_client_configuration_file.xml
+    export ROS_DISCOVERY_SERVER=35.9.128.247:11811
